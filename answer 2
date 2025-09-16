@@ -1,5 +1,5 @@
  2.13 Would it be possible for the user to develop a new command interpreter using the system-call interface provided by the operating system?
-
+  Answer:
   Yes, a user can develop a new command interpreter using the system-call interface. A command interpreter (shell) is just a program that takes user commands 
   and uses system calls like fork() to create a new process, exec() to run the program, and exit() to end it. For example, when we type a command, the shell 
   simply asks the operating system through these system calls to run it. This means anyone can write their own shell program, because the OS already provides 
