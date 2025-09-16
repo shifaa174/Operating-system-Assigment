@@ -14,4 +14,5 @@ Disadvantages:
 3)Sometimes it adds overhead and may reduce efficiency for devices.
 
 Example: A file "/home/file.txt" and a device </dev/tty> can both be read using read(). But for special device operations, normal file calls are not enough.
+
 So overall, it makes the system simple and consistent, but device-specific needs still need extra handling.
