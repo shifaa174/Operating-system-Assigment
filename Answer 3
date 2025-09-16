@@ -1,1 +1,12 @@
-2.14 Describe why Android uses ahead-of-time(AOT) rather than just-in-time (JIT) compilation
+2.14: Describe why Android uses ahead-of-time(AOT) rather than just-in-time (JIT) compilation?
+
+Answer:
+JIT (Just-In-Time) compilation compiles code at runtime (while the app is running). 
+AOT (Ahead-Of-Time) compilation compiles code into machine code before the app opens.
+
+Android may prefer AOT compilation for many reasons like: 
+1. Performance Improvement: AOT compiles apps to native machine code once (at install/first launch). This reduces runtime overhead since the app doesn’t need to compile code repeatedly.
+2. Battery Efficiency: JIT consumes CPU cycles for compiling during runtime which wastes battery. AOT avoids repeated compilation that leads to lower energy usage.
+3. Consistent Performance: With AOT, the app runs predictably since it’s already compiled.
+4. Reduced Memory Usage: Unlike AOT, JIT needs extra memory for storing compiled code during each execution.
+
