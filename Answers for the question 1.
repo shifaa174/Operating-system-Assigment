@@ -36,14 +36,16 @@ Disadvantages
    - Applications may lose fine-grained control over devices if restricted to file-like operations.  
 
 
-### Example: UNIX/Linux
-- In UNIX, everything is treated as a “file”:  
-  - Disk files → `/home/file.txt`  
-  - Devices → `/dev/tty`, `/dev/sda`  
+Example: UNIX/Linux
+  - In UNIX,
+    everything is treated as a “file”:  
+  - Disk files : `/home/file.txt`  
+  - Devices : `/dev/tty`, `/dev/sda` 
+
 - Advantage: same `read()` and `write()` work.  
 - Disadvantage: special device operations still need `ioctl()` calls.  
 
 
-- A **unified system call interface** provides simplicity, consistency, and portability.  
+- A unified system call interface provides simplicity, consistency, and portability.  
 - However, since devices often have unique needs, extra mechanisms (like `ioctl()`) are required, which reduces the abstraction’s completeness.
  
