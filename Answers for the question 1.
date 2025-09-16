@@ -4,14 +4,14 @@ Answer:
 In UNIX, the same system call interface is used for both files and devices.
 
 Advantages:
-1)It gives uniformity, since the same calls like open(), read(), write() can work for files as well as devices.
-2)Makes programming easier and also supports I/O redirection (like output can go to file, screen, or printer without changing code).
-3)Improves portability, as the same code works across systems.
+1. It gives uniformity, since the same calls like open(), read(), write() can work for files as well as devices.
+2. Makes programming easier and also supports I/O redirection (like output can go to file, screen, or printer without changing code).
+3. Improves portability, as the same code works across systems.
 
 Disadvantages:
-1)Not all devices behave like files, some need special functions (like ejecting a CD).
-2)So extra system calls like ioctl() are required.
-3)Sometimes it adds overhead and may reduce efficiency for devices.
+1. Not all devices behave like files, some need special functions (like ejecting a CD).
+2. So extra system calls like ioctl() are required.
+3. Sometimes it adds overhead and may reduce efficiency for devices.
 
 Example: A file "/home/file.txt" and a device </dev/tty> can both be read using read(). But for special device operations, normal file calls are not enough.
 
